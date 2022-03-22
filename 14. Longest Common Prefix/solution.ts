@@ -3,7 +3,7 @@
  * @param {string} prefix
  * @return {number} return -1 means there is no difference
  */
-const hasDifference = function (str, prefix) {
+const hasDifference = function (str: string, prefix: string): number {
   const prefixLength = prefix.length;
   for (let i = 0; i < prefixLength; i++) {
     if (str[i] !== prefix[i]) return i;
@@ -16,7 +16,7 @@ const hasDifference = function (str, prefix) {
  * @param {string[]} strs
  * @return {string}
  */
-var longestCommonPrefix = function (strs) {
+var longestCommonPrefix = function (strs: string[]): string {
   let prefix = strs[0];
   strs.forEach(str => {
     const differenceIndex = hasDifference(str, prefix);
@@ -24,8 +24,8 @@ var longestCommonPrefix = function (strs) {
 
     prefix = prefix.slice(0, differenceIndex);
   });
-  
+
   return prefix;
 };
 
-module.exports = longestCommonPrefix;
+export default longestCommonPrefix;

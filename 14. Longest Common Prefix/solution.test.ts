@@ -1,4 +1,4 @@
-const solution = require('./solution');
+import solution from './solution'
 
 test('should return fl', () => {
   expect(solution(['flower', 'flow', 'flight'])).toBe('fl');
